@@ -27,8 +27,10 @@ export const metadata: Metadata = {
   },
 };
 
-import { CookieConsent } from "@/components/CookieConsent";
-import { ExitIntentPopup } from "@/components/ExitIntentPopup";
+import dynamic from 'next/dynamic';
+
+const CookieConsent = dynamic(() => import("@/components/CookieConsent").then(mod => mod.CookieConsent), { ssr: false });
+const ExitIntentPopup = dynamic(() => import("@/components/ExitIntentPopup").then(mod => mod.ExitIntentPopup), { ssr: false });
 import { MotionProvider } from "@/components/MotionProvider";
 
 export default function RootLayout({

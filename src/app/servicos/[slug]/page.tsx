@@ -1,4 +1,5 @@
-
+import React from "react";
+import ReactDOM from "react-dom";
 import Image from "next/image";
 import Link from "next/link";
 import { MessageCircle, ShieldCheck, Clock, MapPin, Star, ChevronRight, PenTool, Phone, Mail } from "lucide-react";
@@ -61,13 +62,16 @@ const services = [
   },
 ];
 
-export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = React.use(params);
   const service = services.find((s) => s.slug === slug);
 
   if (!service) {
     notFound();
   }
+
+  // Preload the LCP image
+  ReactDOM.preload(service.img.imageUrl, { as: "image", fetchPriority: "high" });
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -75,13 +79,13 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
       {/* Hero Service */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <Image
+        <img
           src={service.img.imageUrl}
           alt={service.title}
-          fill
-          priority
-          fetchPriority="high"
-          className="object-cover brightness-[0.2]"
+          fetchpriority="high"
+          loading="eager"
+          decoding="sync"
+          className="absolute inset-0 w-full h-full object-cover brightness-[0.2]"
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <nav className="flex justify-center gap-2 text-xs font-bold uppercase tracking-widest text-white/60 mb-6">

@@ -1,7 +1,6 @@
 
 import type {Metadata} from 'next';
 import './globals.css';
-import { Toaster } from "@/components/ui/toaster"
 import { Poppins, Inter } from 'next/font/google'
 
 const poppins = Poppins({ 
@@ -31,6 +30,7 @@ import dynamic from 'next/dynamic';
 
 const CookieConsent = dynamic(() => import("@/components/CookieConsent").then(mod => mod.CookieConsent), { ssr: false });
 const ExitIntentPopup = dynamic(() => import("@/components/ExitIntentPopup").then(mod => mod.ExitIntentPopup), { ssr: false });
+const Toaster = dynamic(() => import("@/components/ui/toaster").then(mod => mod.Toaster), { ssr: false });
 import { MotionProvider } from "@/components/MotionProvider";
 
 export default function RootLayout({

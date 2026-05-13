@@ -1,4 +1,5 @@
-
+import React from "react";
+import ReactDOM from "react-dom";
 import Image from "next/image";
 import Link from "next/link";
 import { MessageCircle, ShieldCheck, Clock, MapPin, Star, ChevronRight, PenTool, Mail, Phone } from "lucide-react";
@@ -55,8 +56,13 @@ const testimonials = [
   { name: "João Pereira", text: "Preço justo e pontualidade. Manutenção da porta de vidro da loja ficou perfeita.", date: "há 3 semanas" }
 ];
 
+import { AnimatedSection } from "@/components/AnimatedSection";
+
 export default function Home() {
   const heroImg = { imageUrl: "/hero.webp" };
+  
+  // Preload the LCP image
+  ReactDOM.preload(heroImg.imageUrl, { as: "image", fetchPriority: "high" });
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -64,13 +70,13 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        <Image
+        <img
           src={heroImg.imageUrl}
           alt="Fachada moderna da Village Glass com vidros espelhados"
-          fill
-          priority
-          fetchPriority="high"
-          className="object-cover brightness-[0.3]"
+          fetchpriority="high"
+          loading="eager"
+          decoding="sync"
+          className="absolute inset-0 w-full h-full object-cover brightness-[0.3]"
         />
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center text-white">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold mb-6 leading-tight animate-in fade-in slide-in-from-bottom duration-700">

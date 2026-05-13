@@ -79,13 +79,13 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover brightness-[0.3]"
         />
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center text-white">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold mb-6 leading-tight animate-in fade-in slide-in-from-bottom duration-700">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold mb-6 leading-tight animate-in fade-in slide-in-from-bottom duration-500">
             Excelência em <span className="text-secondary">Vidraçaria</span> em Curitiba
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed animate-in fade-in slide-in-from-bottom duration-700 delay-200">
+          <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed animate-in fade-in slide-in-from-bottom duration-500 delay-100">
             Soluções personalizadas em vidros temperados, laminados, espelhos e manutenção especializada com garantia de qualidade Village Glass.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-in fade-in slide-in-from-bottom duration-700 delay-300">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-in fade-in slide-in-from-bottom duration-500 delay-200">
             <Button asChild size="lg" variant="secondary" className="rounded-full px-10 font-bold text-lg h-14 w-full sm:w-auto shadow-2xl hover:scale-105 transition-transform">
               <a href="https://wa.me/5541998379447?text=Olá,%20gostaria%20de%20um%20orçamento.">
                 Solicitar Orçamento Grátis

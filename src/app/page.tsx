@@ -16,37 +16,37 @@ const services = [
     slug: "box-para-banheiros",
     title: "Box para Banheiros",
     desc: "Instalações sob medida que combinam estilo e praticidade. Nossos boxes de vidro temperado garantem resistência e um design moderno para valorizar seu banheiro.",
-    img: { imageUrl: "/box-banheiro.webp" },
+    img: { imageUrl: "/box-banheiro.avif" },
   },
   {
     slug: "espelhos-sob-medida",
     title: "Espelhos Sob Medida",
     desc: "Amplie e valorize seus espaços com espelhos personalizados. Oferecemos soluções feitas sob medida para trazer elegância e funcionalidade a qualquer ambiente, residencial ou comercial.",
-    img: { imageUrl: "/espelhos.webp" },
+    img: { imageUrl: "/espelhos.avif" },
   },
   {
     slug: "portas-deslizantes",
     title: "Portas Deslizantes",
     desc: "Aproveite melhor seus espaços com portas deslizantes de vidro. Ideais para ambientes contemporâneos, nossas soluções combinam praticidade e design elegante.",
-    img: { imageUrl: "/portas-vidro.webp" },
+    img: { imageUrl: "/portas-vidro.avif" },
   },
   {
     slug: "sacadas-de-vidro-temperado",
     title: "Sacadas de Vidro Temperado",
     desc: "Transforme sua sacada em um espaço mais seguro e aconchegante. Nossos fechamentos de vidro oferecem isolamento, proteção e um visual moderno para sua residência ou comércio.",
-    img: { imageUrl: "/sacadas.webp" },
+    img: { imageUrl: "/sacadas.avif" },
   },
   {
     slug: "guarda-corpo-de-vidro",
     title: "Guarda-Corpo de Vidro",
     desc: "Proporcionamos proteção e sofisticação com guarda-corpos de vidro sob medida. Soluções ideais para escadas, varandas e sacadas, unindo resistência e design moderno.",
-    img: { imageUrl: "/guarda-corpo.webp" },
+    img: { imageUrl: "/guarda-corpo.avif" },
   },
   {
     slug: "manutencao",
     title: "Manutenção",
     desc: "Preserve a beleza e segurança dos seus vidros com nossos serviços de manutenção. Realizamos ajustes, reparos e trocas para garantir a durabilidade e o perfeito funcionamento das suas instalações.",
-    img: { imageUrl: "/manutencao.webp" },
+    img: { imageUrl: "/manutencao.avif" },
   },
 ];
 
@@ -57,10 +57,10 @@ const testimonials = [
 ];
 
 export default function Home() {
-  const heroImg = { imageUrl: "/hero.webp" };
+  const heroImg = { imageUrl: "/hero.avif" };
   
-  // Preload the LCP image
-  ReactDOM.preload(heroImg.imageUrl, { as: "image", fetchPriority: "high" });
+  // Preload the LCP image aggressively
+  ReactDOM.preload(heroImg.imageUrl, { as: "image", fetchPriority: "high", type: "image/avif" });
 
   return (
     <div className="flex flex-col min-h-screen">

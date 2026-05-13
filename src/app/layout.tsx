@@ -21,8 +21,10 @@ export const metadata: Metadata = {
   description: 'Especialista em instalação de vidros em Curitiba. Box para banheiro, espelhos sob medida, fechamento de sacadas e manutenção de vidros. Solicite seu orçamento!',
   keywords: 'Vidraçaria em Curitiba, Instalação de Vidros, Sacadas de Vidro, Box para Banheiro, Espelhos Curitiba, Manutenção de Vidros',
   icons: {
-    icon: '/FAV-150x150.webp',
     apple: '/FAV-150x150.webp',
+  },
+  alternates: {
+    canonical: 'https://www.vidracariavilageglass.com.br',
   },
 };
 

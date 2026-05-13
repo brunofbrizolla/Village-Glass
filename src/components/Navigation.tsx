@@ -3,7 +3,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { MessageCircle, Menu, X } from "lucide-react";
+import Image from "next/image";
+import { MessageCircle, Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -11,8 +12,6 @@ const navLinks = [
   { name: "Início", href: "/" },
   { name: "Quem Somos", href: "#sobre" },
   { name: "Serviços", href: "#servicos" },
-  { name: "Galeria", href: "#galeria" },
-  { name: "Localização", href: "#contato" },
 ];
 
 export function Navigation() {
@@ -37,15 +36,19 @@ export function Navigation() {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-xl">
-            V
-          </div>
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/FAV-150x150.webp"
+            alt="Village Glass logo"
+            width={40}
+            height={40}
+            className="drop-shadow-sm rounded-lg"
+          />
           <div className="flex flex-col">
             <span className={cn("font-headline font-bold text-lg leading-tight", !isScrolled && "text-white")}>
-              Villageglass
+              Village Glass
             </span>
-            <span className={cn("text-[10px] uppercase tracking-wider font-medium opacity-80", !isScrolled && "text-white")}>
+            <span className={cn("text-[10px] uppercase tracking-wider font-medium opacity-70", !isScrolled && "text-white")}>
               Vidraçaria Curitiba
             </span>
           </div>
@@ -67,13 +70,11 @@ export function Navigation() {
           ))}
           <Button asChild variant="secondary" size="sm" className="rounded-full shadow-lg">
             <a
-              href="https://wa.me/5541998379447?text=Olá,%20gostaria%20de%20um%20orçamento."
-              target="_blank"
-              rel="noopener noreferrer"
+              href="tel:+5541998379447"
               className="flex items-center gap-2"
             >
-              <MessageCircle className="w-4 h-4" />
-              WhatsApp
+              <Phone className="w-4 h-4" />
+              Ligar Agora
             </a>
           </Button>
         </div>
@@ -102,13 +103,11 @@ export function Navigation() {
           ))}
           <Button asChild variant="secondary" className="w-full">
             <a
-              href="https://wa.me/5541998379447?text=Olá,%20gostaria%20de%20um%20orçamento."
-              target="_blank"
-              rel="noopener noreferrer"
+              href="tel:+5541998379447"
               className="flex items-center gap-2"
             >
-              <MessageCircle className="w-5 h-5" />
-              Solicitar Orçamento
+              <Phone className="w-5 h-5" />
+              Ligar Agora
             </a>
           </Button>
         </div>

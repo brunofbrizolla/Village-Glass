@@ -26,11 +26,7 @@ export const metadata: Metadata = {
   },
 };
 
-import dynamic from 'next/dynamic';
-
-const CookieConsent = dynamic(() => import("@/components/CookieConsent").then(mod => mod.CookieConsent), { ssr: false });
-const ExitIntentPopup = dynamic(() => import("@/components/ExitIntentPopup").then(mod => mod.ExitIntentPopup), { ssr: false });
-const Toaster = dynamic(() => import("@/components/ui/toaster").then(mod => mod.Toaster), { ssr: false });
+import { ClientSideComponents } from "@/components/ClientSideComponents";
 import { MotionProvider } from "@/components/MotionProvider";
 
 export default function RootLayout({
@@ -46,9 +42,7 @@ export default function RootLayout({
           <main id="main-content">
             {children}
           </main>
-          <CookieConsent />
-          <ExitIntentPopup />
-          <Toaster />
+          <ClientSideComponents />
         </MotionProvider>
       </body>
     </html>

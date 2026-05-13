@@ -56,8 +56,6 @@ const testimonials = [
   { name: "João Pereira", text: "Preço justo e pontualidade. Manutenção da porta de vidro da loja ficou perfeita.", date: "há 3 semanas" }
 ];
 
-import { AnimatedSection } from "@/components/AnimatedSection";
-
 export default function Home() {
   const heroImg = { imageUrl: "/hero.webp" };
   

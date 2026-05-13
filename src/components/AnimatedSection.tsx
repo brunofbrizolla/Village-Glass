@@ -7,16 +7,16 @@ export function AnimatedSection({ children, direction = "left", delay = 0 }: { c
   const variants = {
     hidden: { 
       opacity: 0, 
-      x: direction === "left" ? -100 : direction === "right" ? 100 : 0,
-      y: direction === "up" ? 50 : 0
+      x: direction === "left" ? -60 : direction === "right" ? 60 : 0,
+      y: direction === "up" ? 40 : 0
     },
     visible: { 
       opacity: 1, 
       x: 0,
       y: 0,
       transition: { 
-        duration: 0.8, 
-        ease: "easeOut",
+        duration: 1.2, 
+        ease: [0.22, 1, 0.36, 1], // Custom smooth quintic easing
         delay 
       }
     }

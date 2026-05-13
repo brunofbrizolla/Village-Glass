@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { getPlaceholderImage } from "@/lib/placeholder-images";
+import { AnimatedSection } from "@/components/AnimatedSection";
+
 import { notFound } from "next/navigation";
 
 const testimonials = [
@@ -102,55 +104,60 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="flex-shrink-0 relative">
-              <div className="relative w-80 h-80 md:w-[480px] md:h-[480px] rounded-full p-2 border-4 border-primary/10 shadow-2xl overflow-hidden bg-white mx-auto">
-                <div className="relative w-full h-full rounded-full overflow-hidden">
-                  <Image
-                    src={service.img.imageUrl}
-                    alt={service.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
+              <AnimatedSection direction="left">
+                <div className="relative w-80 h-80 md:w-[480px] md:h-[480px] rounded-full p-2 border-4 border-primary/10 shadow-2xl overflow-hidden bg-white mx-auto">
+                  <div className="relative w-full h-full rounded-full overflow-hidden">
+                    <Image
+                      src={service.img.imageUrl}
+                      alt={service.title}
+                      fill
+                      sizes="(max-width: 768px) 320px, 480px"
+                      className="object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                  </div>
                 </div>
-              </div>
+              </AnimatedSection>
             </div>
 
             <div className="space-y-8">
-              <div className="space-y-4">
-                <h2 className="text-3xl font-headline font-bold text-foreground">Excelência em cada detalhe</h2>
-                <div className="h-1.5 w-20 bg-primary rounded-full" />
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  {service.details}
-                </p>
-              </div>
+              <AnimatedSection direction="right">
+                <div className="space-y-4">
+                  <h2 className="text-3xl font-headline font-bold text-foreground">Excelência em cada detalhe</h2>
+                  <div className="h-1.5 w-20 bg-primary rounded-full" />
+                  <p className="text-muted-foreground text-lg leading-relaxed">
+                    {service.details}
+                  </p>
+                </div>
 
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div className="flex gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                    <ShieldCheck className="w-5 h-5" />
+                <div className="grid sm:grid-cols-2 gap-6 mt-8">
+                  <div className="flex gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                      <ShieldCheck className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-sm">Garantia</div>
+                      <p className="text-xs text-muted-foreground">Material e instalação certificados.</p>
+                    </div>
                   </div>
-                  <div>
-                    <div className="font-bold text-sm">Garantia</div>
-                    <p className="text-xs text-muted-foreground">Material e instalação certificados.</p>
+                  <div className="flex gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                      <Clock className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-sm">Agilidade</div>
+                      <p className="text-xs text-muted-foreground">Prazos de entrega respeitados.</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                    <Clock className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-sm">Agilidade</div>
-                    <p className="text-xs text-muted-foreground">Prazos de entrega respeitados.</p>
-                  </div>
-                </div>
-              </div>
 
-              <div className="pt-6">
-                <Button asChild size="lg" className="rounded-full px-10 h-14 font-bold text-lg shadow-xl hover:scale-105 transition-transform bg-primary text-white">
-                  <a href={`https://wa.me/5541998379447?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20${encodeURIComponent(service.title)}.`}>
-                    Solicitar Orçamento Agora
-                  </a>
-                </Button>
-              </div>
+                <div className="pt-8">
+                  <Button asChild size="lg" className="rounded-full px-10 h-14 font-bold text-lg shadow-xl hover:scale-105 transition-transform bg-primary text-white">
+                    <a href={`https://wa.me/5541998379447?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20${encodeURIComponent(service.title)}.`}>
+                      Solicitar Orçamento Agora
+                    </a>
+                  </Button>
+                </div>
+              </AnimatedSection>
             </div>
           </div>
         </div>
@@ -188,9 +195,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section id="sobre" className="py-24 px-4 bg-muted/20">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-bold uppercase tracking-wider">
-              <ShieldCheck className="w-4 h-4" /> Qualidade Curitibana
-            </div>
+
             <h2 className="text-3xl md:text-5xl font-headline font-bold text-foreground leading-tight">
               Bem-vindo à Curitiba Village Glass
             </h2>

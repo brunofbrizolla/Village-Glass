@@ -6,8 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Navigation } from "@/components/Navigation";
 
 import { Footer } from "@/components/Footer";
-
 import { getPlaceholderImage } from "@/lib/placeholder-images";
+import { AnimatedSection } from "@/components/AnimatedSection";
+
 
 const services = [
   {
@@ -111,45 +112,50 @@ export default function Home() {
                 >
                   {/* Circular image */}
                   <div className="flex-shrink-0 relative">
-                    <div className="relative w-80 h-80 md:w-[400px] md:h-[400px] rounded-full p-1.5 border-2 border-primary/20 shadow-xl overflow-hidden bg-white">
-                      <div className="relative w-full h-full rounded-full overflow-hidden">
-                        <Image
-                          src={service.img.imageUrl}
-                          alt={service.title}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-700"
-                        />
+                    <AnimatedSection direction={isEven ? "left" : "right"}>
+                      <div className="relative w-80 h-80 md:w-[400px] md:h-[400px] rounded-full p-1.5 border-2 border-primary/20 shadow-xl overflow-hidden bg-white">
+                        <div className="relative w-full h-full rounded-full overflow-hidden">
+                          <Image
+                            src={service.img.imageUrl}
+                            alt={service.title}
+                            fill
+                            sizes="(max-width: 768px) 320px, 400px"
+                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                          />
+                        </div>
                       </div>
-                    </div>
+                    </AnimatedSection>
                   </div>
 
                   {/* Text */}
                   <div className="flex flex-col gap-4 flex-1 text-center md:text-left">
-                    <h3 className="text-2xl md:text-3xl font-headline font-bold text-foreground leading-tight">
-                      {service.title}
-                    </h3>
+                    <AnimatedSection direction={isEven ? "right" : "left"}>
+                      <h3 className="text-2xl md:text-3xl font-headline font-bold text-foreground leading-tight">
+                        {service.title}
+                      </h3>
 
-                    <p className="text-muted-foreground text-lg leading-relaxed">
-                      {service.desc}
-                    </p>
+                      <p className="text-muted-foreground text-lg leading-relaxed">
+                        {service.desc}
+                      </p>
 
-                    <div className="h-1 w-16 bg-primary rounded-full mx-auto md:mx-0" />
+                      <div className="h-1 w-16 bg-primary rounded-full mx-auto md:mx-0" />
 
-                    <div className="flex flex-col sm:flex-row items-center md:items-start gap-4 mt-2">
-                      <a
-                        href={`https://wa.me/5541998379447?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20${encodeURIComponent(service.title)}.`}
-                        className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-white font-bold text-base hover:bg-primary/90 transition-colors shadow-lg"
-                      >
-                        <MessageCircle className="w-5 h-5" />
-                        Pedir Orçamento
-                      </a>
-                      <Link 
-                        href={`/servicos/${service.slug}`}
-                        className="inline-flex items-center gap-2 text-primary font-bold hover:underline py-2 px-4"
-                      >
-                        Saiba Mais <ChevronRight className="w-4 h-4" />
-                      </Link>
-                    </div>
+                      <div className="flex flex-col sm:flex-row items-center md:items-start gap-4 mt-2">
+                        <a
+                          href={`https://wa.me/5541998379447?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20${encodeURIComponent(service.title)}.`}
+                          className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-white font-bold text-base hover:bg-primary/90 transition-colors shadow-lg"
+                        >
+                          <MessageCircle className="w-5 h-5" />
+                          Pedir Orçamento
+                        </a>
+                        <Link 
+                          href={`/servicos/${service.slug}`}
+                          className="inline-flex items-center gap-2 text-primary font-bold hover:underline py-2 px-4"
+                        >
+                          Saiba Mais <ChevronRight className="w-4 h-4" />
+                        </Link>
+                      </div>
+                    </AnimatedSection>
                   </div>
                 </div>
               );
@@ -162,9 +168,7 @@ export default function Home() {
       <section id="sobre" className="py-24 px-4 bg-muted/20">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-bold uppercase tracking-wider">
-              <ShieldCheck className="w-4 h-4" /> Qualidade Curitibana
-            </div>
+
             <h2 className="text-3xl md:text-5xl font-headline font-bold text-foreground leading-tight">
               Bem-vindo à Curitiba Village Glass
             </h2>

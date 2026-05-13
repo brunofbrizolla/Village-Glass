@@ -1,7 +1,7 @@
 
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 export function AnimatedSection({ children, direction = "left", delay = 0 }: { children: React.ReactNode, direction?: "left" | "right" | "up", delay?: number }) {
   const variants = {
@@ -23,7 +23,7 @@ export function AnimatedSection({ children, direction = "left", delay = 0 }: { c
   };
 
   return (
-    <motion.div
+    <m.div
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
@@ -31,6 +31,6 @@ export function AnimatedSection({ children, direction = "left", delay = 0 }: { c
       className="w-full h-full"
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }

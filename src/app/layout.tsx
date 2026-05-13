@@ -29,6 +29,7 @@ export const metadata: Metadata = {
 
 import { CookieConsent } from "@/components/CookieConsent";
 import { ExitIntentPopup } from "@/components/ExitIntentPopup";
+import { MotionProvider } from "@/components/MotionProvider";
 
 export default function RootLayout({
   children,
@@ -39,12 +40,14 @@ export default function RootLayout({
     <html lang="pt-BR">
 
       <body className={`${poppins.variable} ${inter.variable} font-body antialiased bg-background text-foreground`}>
-        <main id="main-content">
-          {children}
-        </main>
-        <CookieConsent />
-        <ExitIntentPopup />
-        <Toaster />
+        <MotionProvider>
+          <main id="main-content">
+            {children}
+          </main>
+          <CookieConsent />
+          <ExitIntentPopup />
+          <Toaster />
+        </MotionProvider>
       </body>
     </html>
   );

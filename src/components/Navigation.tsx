@@ -42,6 +42,7 @@ export function Navigation() {
             alt="Village Glass logo"
             width={40}
             height={40}
+            priority
             className="drop-shadow-sm rounded-lg"
           />
           <div className="flex flex-col">

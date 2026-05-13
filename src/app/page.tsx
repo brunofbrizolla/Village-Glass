@@ -206,28 +206,28 @@ export default function Home() {
             <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center">
               <ShieldCheck className="w-8 h-8" />
             </div>
-            <h4 className="text-xl font-bold">Segurança Total</h4>
+            <h3 className="text-xl font-bold">Segurança Total</h3>
             <p className="text-primary-foreground/70 text-sm">Vidros temperados e laminados certificados pelas normas ABNT.</p>
           </div>
           <div className="flex flex-col items-center text-center space-y-4">
             <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center">
               <Clock className="w-8 h-8" />
             </div>
-            <h4 className="text-xl font-bold">Prazo Garantido</h4>
+            <h3 className="text-xl font-bold">Prazo Garantido</h3>
             <p className="text-primary-foreground/70 text-sm">Respeitamos seu tempo com cronogramas de instalação rigorosos.</p>
           </div>
           <div className="flex flex-col items-center text-center space-y-4">
             <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center">
               <PenTool className="w-8 h-8" />
             </div>
-            <h4 className="text-xl font-bold">Mão de Obra</h4>
+            <h3 className="text-xl font-bold">Mão de Obra</h3>
             <p className="text-primary-foreground/70 text-sm">Profissionais treinados e especializados em acabamentos finos.</p>
           </div>
           <div className="flex flex-col items-center text-center space-y-4">
             <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center">
               <MapPin className="w-8 h-8" />
             </div>
-            <h4 className="text-xl font-bold">Atendimento Local</h4>
+            <h3 className="text-xl font-bold">Atendimento Local</h3>
             <p className="text-primary-foreground/70 text-sm">Base em Curitiba para suporte rápido em toda a região metropolitana.</p>
           </div>
         </div>
@@ -306,6 +306,7 @@ export default function Home() {
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
                   className="grayscale hover:grayscale-0 transition-all duration-700"
+                  title="Localização da Vidraçaria Village Glass no Google Maps"
                 ></iframe>
               </div>
             </div>
@@ -327,7 +328,7 @@ export default function Home() {
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg text-foreground">Endereço</h4>
+                    <h3 className="font-bold text-lg text-foreground">Endereço</h3>
                     <p className="text-muted-foreground">R. Professor João Falarz, 1421 - Campo Comprido, Curitiba - PR</p>
                   </div>
                 </div>
@@ -338,7 +339,7 @@ export default function Home() {
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg text-foreground">Telefone</h4>
+                    <h3 className="font-bold text-lg text-foreground">Telefone</h3>
                     <p className="text-muted-foreground">(41) 99837-9447</p>
                   </div>
                 </div>
@@ -349,7 +350,7 @@ export default function Home() {
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg text-foreground">E-mail</h4>
+                    <h3 className="font-bold text-lg text-foreground">E-mail</h3>
                     <p className="text-muted-foreground">contato@villageglass.com.br</p>
                   </div>
                 </div>

@@ -173,12 +173,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-border/50 text-center space-y-4">
               <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto">1</div>
-              <h4 className="font-bold text-xl">Medição Técnica</h4>
+              <h3 className="font-bold text-xl">Medição Técnica</h3>
               <p className="text-muted-foreground text-sm">Visitamos seu local para coletar as medidas exatas e avaliar a estrutura necessária.</p>
             </div>
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-border/50 text-center space-y-4">
               <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto">2</div>
-              <h4 className="font-bold text-xl">Produção Sob Medida</h4>
+              <h3 className="font-bold text-xl">Produção Sob Medida</h3>
               <p className="text-muted-foreground text-sm">Seu pedido é enviado para fabricação com vidros de alta resistência e ferragens premium.</p>
             </div>
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-border/50 text-center space-y-4">

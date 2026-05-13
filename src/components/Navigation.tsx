@@ -83,6 +83,7 @@ export function Navigation() {
         <button
           className={cn("md:hidden", !isScrolled ? "text-white" : "text-foreground")}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
         >
           {isMobileMenuOpen ? <X /> : <Menu />}
         </button>

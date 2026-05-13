@@ -39,7 +39,9 @@ export default function RootLayout({
     <html lang="pt-BR">
 
       <body className={`${poppins.variable} ${inter.variable} font-body antialiased bg-background text-foreground`}>
-        {children}
+        <main id="main-content">
+          {children}
+        </main>
         <CookieConsent />
         <ExitIntentPopup />
         <Toaster />

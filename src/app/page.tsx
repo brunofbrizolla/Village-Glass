@@ -69,6 +69,7 @@ export default function Home() {
           alt="Fachada moderna da Village Glass com vidros espelhados"
           fill
           priority
+          fetchPriority="high"
           className="object-cover brightness-[0.3]"
         />
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center text-white">

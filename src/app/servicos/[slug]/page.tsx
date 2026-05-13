@@ -80,6 +80,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           alt={service.title}
           fill
           priority
+          fetchPriority="high"
           className="object-cover brightness-[0.2]"
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">

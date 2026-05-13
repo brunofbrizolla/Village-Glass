@@ -31,7 +31,7 @@ export function Footer() {
         </div>
 
         <div className="space-y-4">
-          <h5 className="font-bold text-sm uppercase tracking-widest text-primary">Links e Documentos</h5>
+          <h3 className="font-bold text-sm uppercase tracking-widest text-primary">Links e Documentos</h3>
           <ul className="space-y-2 text-muted-foreground text-sm">
             <li><Link href="/" className="hover:text-primary transition-colors">Início</Link></li>
             <li><Link href="/#sobre" className="hover:text-primary transition-colors">Quem Somos</Link></li>
@@ -41,7 +41,7 @@ export function Footer() {
         </div>
 
         <div className="space-y-4">
-          <h5 className="font-bold text-sm uppercase tracking-widest text-primary">Contato</h5>
+          <h3 className="font-bold text-sm uppercase tracking-widest text-primary">Contato</h3>
           <ul className="space-y-3 text-muted-foreground text-sm">
             <li className="flex items-start gap-3">
               <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />

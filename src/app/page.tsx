@@ -282,7 +282,7 @@ export default function Home() {
           <div className="mt-12 text-center">
             <a 
               href="#" 
-              className="inline-flex items-center gap-2 text-sm font-bold text-[#4285f4] hover:underline"
+              className="inline-flex items-center gap-2 text-sm font-bold text-[#1a73e8] hover:underline"
             >
               Ver todas as avaliações no Google <ChevronRight className="w-4 h-4" />
             </a>

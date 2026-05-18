@@ -475,7 +475,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
                   </div>
                   <div>
                     <h4 className="font-bold text-lg text-foreground">Endereço</h4>
-                    <p className="text-muted-foreground">R. Professor João Falarz, 1421 - Campo Comprido, Curitiba - PR</p>
+                    <p className="text-muted-foreground">R. Bernardo Krasinski, 84 - Ecoville, Curitiba - PR, 81200-406, Brasil</p>
                   </div>
                 </div>
                 <div className="flex gap-5 group">

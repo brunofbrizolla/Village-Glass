@@ -338,7 +338,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg text-foreground">Endereço</h3>
-                    <p className="text-muted-foreground">R. Professor João Falarz, 1421 - Campo Comprido, Curitiba - PR</p>
+                    <p className="text-muted-foreground">R. Bernardo Krasinski, 84 - Ecoville, Curitiba - PR, 81200-406, Brasil</p>
                   </div>
                 </div>
 

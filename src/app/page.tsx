@@ -9,6 +9,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { getPlaceholderImage } from "@/lib/placeholder-images";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { GalleryCarousel } from "@/components/GalleryCarousel";
 
 
 const services = [
@@ -46,7 +47,7 @@ const services = [
     slug: "manutencao",
     title: "Manutenção",
     desc: "Preserve a beleza e segurança dos seus vidros com nossos serviços de manutenção. Realizamos ajustes, reparos e trocas para garantir a durabilidade e o perfeito funcionamento das suas instalações.",
-    img: { imageUrl: "/manutencao.avif" },
+    img: { imageUrl: "/manutencao-mola-piso.avif" },
   },
 ];
 
@@ -71,7 +72,7 @@ export default function Home() {
         <img
           src={heroImg.imageUrl}
           alt="Fachada moderna da Village Glass com vidros espelhados"
-          fetchpriority="high"
+          fetchPriority="high"
           loading="eager"
           decoding="sync"
           className="absolute inset-0 w-full h-full object-cover brightness-[0.3]"
@@ -115,11 +116,11 @@ export default function Home() {
                   key={idx}
                   className={`group flex flex-col gap-12 items-center ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}
                 >
-                  {/* Circular image */}
+                  {/* Circular image turned into elegant portrait rounded rectangle */}
                   <div className="flex-shrink-0 relative">
                     <AnimatedSection direction={isEven ? "left" : "right"}>
-                      <div className="relative w-80 h-80 md:w-[400px] md:h-[400px] rounded-full p-1.5 border-2 border-primary/20 shadow-xl overflow-hidden bg-white">
-                        <div className="relative w-full h-full rounded-full overflow-hidden">
+                      <div className="relative w-80 h-[380px] md:w-[400px] md:h-[500px] rounded-[2.5rem] p-1.5 border-2 border-primary/20 shadow-xl overflow-hidden bg-white">
+                        <div className="relative w-full h-full rounded-[2.2rem] overflow-hidden">
                           <Image
                             src={service.img.imageUrl}
                             alt={service.title}
@@ -202,6 +203,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Gallery Carousel Section */}
+      <GalleryCarousel />
 
 
       {/* Why Choose Us */}

@@ -58,7 +58,7 @@ const services = [
     title: "Manutenção",
     desc: "Preserve a beleza e segurança dos seus vidros com nossos serviços de manutenção. Realizamos ajustes, reparos e trocas para garantir a durabilidade e o perfeito funcionamento das suas instalações.",
     details: "Nossa manutenção especializada cobre desde simples regulagens de portas e janelas até a toque de roldanas, batedores e vidros danificados. Utilizamos componentes de alta qualidade para garantir que sua instalação volte a funcionar como nova, prevenindo acidentes e estendendo a vida útil do material.",
-    img: { imageUrl: "/manutencao.avif" },
+    img: { imageUrl: "/manutencao-mola-piso.avif" },
   },
 ];
 
@@ -82,7 +82,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
         <img
           src={service.img.imageUrl}
           alt={service.title}
-          fetchpriority="high"
+          fetchPriority="high"
           loading="eager"
           decoding="sync"
           className="absolute inset-0 w-full h-full object-cover brightness-[0.2]"
@@ -110,13 +110,13 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="flex-shrink-0 relative">
               <AnimatedSection direction="left">
-                <div className="relative w-80 h-80 md:w-[480px] md:h-[480px] rounded-full p-2 border-4 border-primary/10 shadow-2xl overflow-hidden bg-white mx-auto">
-                  <div className="relative w-full h-full rounded-full overflow-hidden">
+                <div className="relative w-80 h-[380px] md:w-[440px] md:h-[550px] rounded-[3rem] p-2 border-4 border-primary/10 shadow-2xl overflow-hidden bg-white mx-auto">
+                  <div className="relative w-full h-full rounded-[2.7rem] overflow-hidden">
                     <Image
                       src={service.img.imageUrl}
                       alt={service.title}
                       fill
-                      sizes="(max-width: 768px) 320px, 480px"
+                      sizes="(max-width: 768px) 320px, 440px"
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                   </div>
@@ -167,6 +167,132 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
           </div>
         </div>
       </section>
+
+      {/* Maintenance Specialties Section */}
+      {slug === "manutencao" && (
+        <section className="py-24 px-4 bg-muted/10 border-t border-b border-border/40">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16 space-y-4">
+              <h2 className="text-3xl md:text-5xl font-headline font-bold text-foreground">
+                Nossas Especialidades de <span className="text-primary">Manutenção</span>
+              </h2>
+              <p className="text-muted-foreground text-lg max-w-xl mx-auto leading-relaxed">
+                Oferecemos soluções completas para recuperar e prolongar a vida útil das suas estruturas de vidro, garantindo máxima segurança.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Mola de Piso */}
+              <AnimatedSection direction="left">
+                <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-border/50 flex flex-col h-full group hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                  <div className="relative h-64 w-full overflow-hidden">
+                    <Image
+                      src="/manutencao-mola-piso.avif"
+                      alt="Manutenção de Mola de Piso"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 500px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                    <span className="absolute bottom-6 left-6 bg-secondary text-white font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg">
+                      Mola Hidráulica de Piso
+                    </span>
+                  </div>
+                  <div className="p-6 md:p-8 flex flex-col flex-grow justify-between">
+                    <div className="space-y-4">
+                      <h3 className="text-xl font-headline font-bold text-foreground leading-tight">
+                        Manutenção de Mola de Piso
+                      </h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        Realizamos a regulagem, troca de óleo, alinhamento técnico e substituição de molas hidráulicas de piso das melhores marcas (Dorma, Soprano, etc.). Essencial para portas pivotantes pesadas em comércios, lojas e condomínios, garantindo suavidade absoluta no fechamento e prevenindo acidentes.
+                      </p>
+                    </div>
+                    <div className="pt-6">
+                      <Button asChild variant="outline" className="rounded-full w-full h-11 border-primary text-primary hover:bg-primary hover:text-white transition-all font-bold text-sm shadow-sm">
+                        <a href="https://wa.me/5541998379447?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20manutenção%20de%20Mola%20de%20Piso.">
+                          Solicitar Mola de Piso
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </AnimatedSection>
+
+              {/* Mola Aérea */}
+              <AnimatedSection direction="up">
+                <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-border/50 flex flex-col h-full group hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                  <div className="relative h-64 w-full overflow-hidden">
+                    <Image
+                      src="/manutencao-mola-aerea.avif"
+                      alt="Manutenção de Mola Aérea"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 500px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                    <span className="absolute bottom-6 left-6 bg-primary text-white font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg">
+                      Mola Aérea de Porta
+                    </span>
+                  </div>
+                  <div className="p-6 md:p-8 flex flex-col flex-grow justify-between">
+                    <div className="space-y-4">
+                      <h3 className="text-xl font-headline font-bold text-foreground leading-tight">
+                        Manutenção de Mola Aérea
+                      </h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        Instalação, regulagem de velocidade e ajuste da força de fechamento de molas aéreas em portas de vidro, alumínio ou madeira. Perfeito para manter a climatização, garantir o fechamento automático silencioso e proteger a estrutura contra rajadas fortes de vento.
+                      </p>
+                    </div>
+                    <div className="pt-6">
+                      <Button asChild variant="outline" className="rounded-full w-full h-11 border-primary text-primary hover:bg-primary hover:text-white transition-all font-bold text-sm shadow-sm">
+                        <a href="https://wa.me/5541998379447?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20manutenção%20de%20Mola%20Aérea.">
+                          Solicitar Mola Aérea
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </AnimatedSection>
+
+              {/* Troca de Roldanas */}
+              <AnimatedSection direction="right">
+                <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-border/50 flex flex-col h-full group hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                  <div className="relative h-64 w-full overflow-hidden">
+                    <Image
+                      src="/manutencao-roldanas.avif"
+                      alt="Troca de Roldanas em Portas e Box"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 500px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                    <span className="absolute bottom-6 left-6 bg-[#00a896] text-white font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg">
+                      Roldanas e Trilhos
+                    </span>
+                  </div>
+                  <div className="p-6 md:p-8 flex flex-col flex-grow justify-between">
+                    <div className="space-y-4">
+                      <h3 className="text-xl font-headline font-bold text-foreground leading-tight">
+                        Troca de Roldanas (Portas & Box)
+                      </h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        Substituição de roldanas oxidadas, travadas ou desalinhadas em portas de correr de vidro e boxes de banheiro. Realizamos a troca por roldanas blindadas de alta performance e regulamos os trilhos para garantir um deslize suave, silencioso e seguro, evitando quebras.
+                      </p>
+                    </div>
+                    <div className="pt-6">
+                      <Button asChild variant="outline" className="rounded-full w-full h-11 border-primary text-primary hover:bg-primary hover:text-white transition-all font-bold text-sm shadow-sm">
+                        <a href="https://wa.me/5541998379447?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20troca%20de%20roldanas%20em%20portas%20de%20vidro%20ou%20box.">
+                          Solicitar Roldanas & Box
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Work Process */}
       <section className="py-24 px-4 bg-muted/30">
